@@ -20,7 +20,6 @@ Return the result table in any order.
 The result format is in the following example.
 
  
-
 Example 1:
 
 Input: 
@@ -63,7 +62,7 @@ INSERT INTO Employee (id, name, department, managerId) VALUES
 SELECT
     m.name AS name
 FROM
-    Employee m
+    Employee AS managerTable m
 JOIN
     Employee e ON m.id = e.managerId
 GROUP BY
